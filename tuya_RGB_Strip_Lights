@@ -1,0 +1,28 @@
+#https://www.reddit.com/r/homebridge/comments/kdeuv2/trying_to_get_tuya_rgb_strip_lights_working_in/
+Trying to get Tuya RGB Strip Lights working in Homebridge?
+Help - Solved
+
+This took me SOOO long and there is barely any information so I'm here to make things easy for you
+
+Here are the config details to use with https://github.com/newbishme/homebridge-tuya
+
+                "name": "Strip Light",
+                "type": "RGBTWLight",
+                "manufacturer": "Cotify",
+                "model": "Smart Wifi Bulb Socket E26",
+                "id": "[YOURID]",
+                "key": "[YOURKEY]",
+                "ip": "[IP OF DEVICE]",
+                "dpPower": 20,
+                "dpMode": 21,
+                "dpBrightness": 22,
+                "dpColorTemperature": 23,
+                "dpColor": 24,
+                "minWhiteColor": 29,
+                "maxWhiteColor": 1000,
+                "colorFunction": "HSB"
+Pay close attention to the above config details as I had to do a lot of testing and changing that wasn't particularly well documented
+
+To get your device ID and Key, there are a bunch of guides around, I wasn't able to snoop mine from the App as it's encrypted now, but you can get it from the api.tuya.com site.
+
+I followed this https://www.youtube.com/watch?v=oq0JL_wicKg
